@@ -1,6 +1,6 @@
 import React from 'react';
-import './calculator.scss';
-import classes from './calculator.scss';
+// import './calculator.scss';
+// import classes from './calculator.scss';
 import TableRow from '../table/tableRow';
 import ShowInput from '../showInput/showInput';
 import ComputedValue from '../computedValue/computedValue';
@@ -94,18 +94,19 @@ class Calculator extends React.Component{
         let tableData = tableRowData.map((rowData,index) => <TableRow key={index} rowArray={rowData} 
             onInputHandler= {this.onInputHandler} />);
         return(
-            <div className={classes.mainContainer}>
-                <ComputedValue computedValue={this.state.computedValue} />
+            <div>Hello</div>
+            // <div className={classes.mainContainer}>
+            //     <ComputedValue computedValue={this.state.computedValue} />
 
-                <ShowInput inputValue={this.state.firstOperand.join('')+this.state.operator+this.state.secondOperator.join('')} 
-                    clearHandler = {this.clearHandler} />
+            //     <ShowInput inputValue={this.state.firstOperand.join('')+this.state.operator+this.state.secondOperator.join('')} 
+            //         clearHandler = {this.clearHandler} />
 
-                <table>
-                    <tbody>
-                        {tableData}
-                    </tbody>
-                </table>
-            </div>
+            //     <table>
+            //         <tbody>
+            //             {tableData}
+            //         </tbody>
+            //     </table>
+            // </div>
         );
     }
 }
